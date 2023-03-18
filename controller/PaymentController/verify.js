@@ -1,8 +1,8 @@
 var crypto = require("crypto");
 const Razorpay = require('razorpay');
 require('dotenv').config();
-const KEY_ID = process.env.KEY_ID;
-const KEY_SECRET = process.env.KEY_SECRET;
+const KEY_ID = 'rzp_test_MtraH0q566XjUb';
+const KEY_SECRET = 'W7kdpNZq9scZ30kTfNA3szfD';
 
 
 const verifypayment = async (req, res) => {
