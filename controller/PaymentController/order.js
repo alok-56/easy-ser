@@ -1,6 +1,6 @@
 const Razorpay = require('razorpay');
 require('dotenv').config();
-const KEY_ID = "'rzp_test_MtraH0q566XjUb'";
+const KEY_ID = 'rzp_test_MtraH0q566XjUb';
 const KEY_SECRET = 'W7kdpNZq9scZ30kTfNA3szfD';
 
 const order = async (req, res) => {
