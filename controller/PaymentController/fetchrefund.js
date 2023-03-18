@@ -4,8 +4,8 @@ const KEY_SECRET = 'W7kdpNZq9scZ30kTfNA3szfD';
 
 
 const Fetchrefund = async (req, res) => {
-    const paymentId=req.body.pay;
-    const refundId=req.body.id
+    const paymentId = req.body.pay;
+    const refundId = req.body.id
     const razorpay = new Razorpay({
         key_id: KEY_ID,
         key_secret: KEY_SECRET,
@@ -17,7 +17,7 @@ const Fetchrefund = async (req, res) => {
             res.send(refund);
         }
     });
-   
+
 }
 
 module.exports = Fetchrefund;

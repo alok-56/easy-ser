@@ -16,13 +16,15 @@ const verifypayment = async (req, res) => {
         .digest('hex');
 
     if (expectedSignature === req.body.response.razorpay_signature) {
-        res.send({code:200,message:"sign valid",data:{
-            order_id:req.body.response.razorpay_order_id,
-            payment_id:req.body.response.razorpay_payment_id
-        }})
+        res.send({
+            code: 200, message: "sign valid", data: {
+                order_id: req.body.response.razorpay_order_id,
+                payment_id: req.body.response.razorpay_payment_id
+            }
+        })
     }
-    else{
-        res.send({code:500,message:"sign invalid"})
+    else {
+        res.send({ code: 500, message: "sign invalid" })
 
     }
 
