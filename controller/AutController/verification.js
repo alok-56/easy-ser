@@ -7,22 +7,22 @@ const verification = async (req, res) => {
     const transport = nodemailer.createTransport({
         service: "gmail",
         auth: {
-            user: "dev6com@gmail.com",
-            pass: "quvexuittntmvvhg"
+            user: "easypeasy11746@gmail.com",
+            pass: "eyqunwdhrpkbzvwg"
         }
     })
     const mailOptions = {
-        from: "dev6com@gmail.com",
+        from: "easypeasy11746@gmail.com",
         to: Email,
         subject: "Your otp is",
         text: Otp
     }
     transport.sendMail(mailOptions, (err, info) => {
         if (err) {
-            console.log(err)
+            res.send(err)
         }
         else {
-            res.send(info)
+            res.send("send")
         }
     })
 

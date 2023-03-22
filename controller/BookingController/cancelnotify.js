@@ -7,12 +7,12 @@ const Cancelnotify = async (req, res) => {
     const transport = nodemailer.createTransport({
         service: "gmail",
         auth: {
-            user: "dev6com@gmail.com",
-            pass: "quvexuittntmvvhg"
+            user: "easypeasy11746@gmail.com",
+            pass: "eyqunwdhrpkbzvwg"
         }
     })
     const mailOptions = {
-        from: "dev6com@gmail.com",
+        from: "easypeasy11746@gmail.com",
         to: Email,
         subject: dateid,
         text: `

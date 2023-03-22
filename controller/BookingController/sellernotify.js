@@ -1,21 +1,20 @@
 const nodemailer = require('nodemailer')
-require('dotenv').config();
 
 const Sellernotify = async (req, res) => {
     let Email = req.body.ownerEmail;
     let userid = req.body.usersId;
     let bookingid = req.body.book;
     let name = req.body.name;
-    let number=req.body.number;
+    let number = req.body.number;
     const transport = nodemailer.createTransport({
         service: "gmail",
         auth: {
-            user: "dev6com@gmail.com",
-            pass: process.env.PASS
+            user: "easypeasy11746@gmail.com",
+            pass: 'eyqunwdhrpkbzvwg'
         }
     })
     const mailOptions = {
-        from: "dev6com@gmail.com",
+        from: "easypeasy11746@gmail.com",
         to: Email,
         subject: "hello",
         text: `Hello sir, New member Booked your room
