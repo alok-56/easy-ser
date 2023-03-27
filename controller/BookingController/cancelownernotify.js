@@ -23,7 +23,7 @@ const Cancelnotifyowner=(req,res)=>{
         Booking-Id : ${bookingid} 
     
         Thank you..
-        regrads Third home `
+        regrads Easy peasy `
     }
     transport.sendMail(mailOptions, (err, info) => {
         if (err) {
