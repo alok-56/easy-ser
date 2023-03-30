@@ -1,15 +1,13 @@
 const roomModel = require('../../db/schema/room');
 
 const updateroom = async (req, res) => {
-    let room = await roomModel.updateone(
-        { _id: req.body.id },
+    let room = await roomModel.updateOne(
+        { _id: req.params.id },
         {
             $set: req.body
         }
     )
-    if (data) {
-        res.send(room)
-    }
+   res.send(room)
 }
 
 module.exports = updateroom;

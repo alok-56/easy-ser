@@ -11,7 +11,7 @@ router.post('/postroom', postroom);
 router.get('/roomlist', getAllroom);
 router.get('/roomlist/:id', singleroom)
 router.get('/searchroom/:key', Searchroom);
-router.put('/update',updateroom);
+router.put('/update/:id',updateroom);
 
 
 module.exports = router;
