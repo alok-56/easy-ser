@@ -8,6 +8,7 @@ const bookupdateback = async () => {
         var date2 = new Date();
         var Difference_In_Time = date2.getTime() - date1;
         var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+        console.log(Difference_In_Days)
         if (Difference_In_Days > 30) {
             if (data[i].status != 'cancelled') {
                 let id = data[i]._id;
