@@ -6,7 +6,11 @@ require("./db/config");
 dotenv.config();
 const port = process.env.PORT || 4500;
 const book = require('./controller/BookingController/bookupdatebyback')
-book()
+
+setInterval(() => {
+    book()
+}, 10000)
+
 
 //----------cloudinary--------------------//
 const fileupload = require('express-fileupload');
