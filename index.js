@@ -7,9 +7,7 @@ dotenv.config();
 const port = process.env.PORT || 4500;
 const book = require('./controller/BookingController/bookupdatebyback')
 
-setInterval(() => {
-    book()
-}, 10000)
+book()
 
 
 //----------cloudinary--------------------//
