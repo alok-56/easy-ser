@@ -10,6 +10,7 @@ const Siglebook = require('../../controller/BookingController/singlebooking');
 const singleupdate = require('../../controller/BookingController/Singleupdate');
 const updatebooking = require('../../controller/BookingController/updatebooking');
 const userbook = require('../../controller/BookingController/userbooking');
+const bookupdateback = require('../../controller/BookingController/bookupdatebyback');
 
 const router = express.Router();
 
@@ -24,5 +25,6 @@ router.post('/book/notify', Booknotify);
 router.post('/book/sellnotify', Sellernotify)
 router.post('/book/cancel', Cancelnotify)
 router.post('/book/cancelowner', Cancelnotifyowner)
+router.get('/allbook/notify', bookupdateback)
 
 module.exports = router;

@@ -5,9 +5,8 @@ const dotenv = require('dotenv');
 require("./db/config");
 dotenv.config();
 const port = process.env.PORT || 4500;
-const book = require('./controller/BookingController/bookupdatebyback')
 
-book()
+
 
 
 //----------cloudinary--------------------//

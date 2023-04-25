@@ -1,7 +1,8 @@
 const BookingModel = require('../../db/schema/booking')
 
 
-const bookupdateback = async () => {
+
+const bookupdateback = async (req, res) => {
     const data = await BookingModel.find();
     for (var i = 0; i < data.length; i++) {
         var date1 = data[i].time;
@@ -20,7 +21,7 @@ const bookupdateback = async () => {
                     }
                 })
                 update = await update.json();
-                console.log(update)
+                res.send(update)
             }
             if (Difference_In_Days > 35) {
                 let id = data[i]._id;
@@ -38,8 +39,7 @@ const bookupdateback = async () => {
                     // setBookid(data[i]._id)
                     sendCancelemail(data[i].email, data[i]._id);
                     ownerCancelemail(data[i].ownerEmail, data[i]._id);
-
-                    console.log(update)
+                    res.send(update)
                 }
             }
         }
@@ -47,6 +47,8 @@ const bookupdateback = async () => {
     }
 
 }
+
+bookupdateback()
 
 const sendCancelemail = async (email, id) => {
     let data = await fetch(`https://easy-ser.vercel.app/roombooking/book/cancel`, {
