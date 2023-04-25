@@ -22,6 +22,7 @@ const bookingSchema = new mongoose.Schema({
     transitionId: Array,
     orderId: Array,
     date: String,
+    lastdate: String,
     canceldate: String,
     time: String,
     pay: String,

@@ -5,7 +5,7 @@ const login = async (req, res) => {
         let login = await Userautmodel.findOne(req.body);
         res.status(200).json(login);
     }
-    else{
+    else {
         res.status(500).json("user not found")
     }
 }
