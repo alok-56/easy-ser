@@ -1,6 +1,6 @@
-const nodemailer=require('nodemailer');
+const nodemailer = require('nodemailer');
 
-const Cancelnotifyowner=(req,res)=>{
+const Cancelnotifyowner = (req, res) => {
     let Email = req.body.email;
     let bookingid = req.body.id;
     console.log(bookingid)
@@ -16,14 +16,7 @@ const Cancelnotifyowner=(req,res)=>{
         from: "easypeasy11746@gmail.com",
         to: Email,
         subject: dateid,
-        text: `
-        Hello sir,
-                 Your booking is cancelled..
-        To Know more about it..Talk to our Technical department..
-        Booking-Id : ${bookingid} 
-    
-        Thank you..
-        regrads Easy peasy `
+        html: '<h1>Hello Sir!</h1><p>Your Room Booked By <b>Alok kumar</b> is cancelled</p>'
     }
     transport.sendMail(mailOptions, (err, info) => {
         if (err) {
@@ -37,4 +30,4 @@ const Cancelnotifyowner=(req,res)=>{
 
 }
 
-module.exports=Cancelnotifyowner;
+module.exports = Cancelnotifyowner;

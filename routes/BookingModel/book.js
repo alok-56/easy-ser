@@ -11,18 +11,18 @@ const singleupdate = require('../../controller/BookingController/Singleupdate');
 const updatebooking = require('../../controller/BookingController/updatebooking');
 const userbook = require('../../controller/BookingController/userbooking');
 
-const router=express.Router();
+const router = express.Router();
 
-router.get('/bookinglist',bookinglist);
-router.get('/bookinglist/:id',Siglebook)
-router.post('/postbooking',postbooking);
-router.get('/userbookinglist/:id',userbook);
-router.put('/updatebooking',updatebooking);
-router.get('/cancelbooking/:id',CancelBooking);
-router.put('/updatebooking/update',singleupdate);
-router.post('/book/notify',Booknotify);
-router.post('/book/sellnotify',Sellernotify)
-router.post('/book/cancel',Cancelnotify)
-router.post('/book/cancelowner',Cancelnotifyowner)
+router.get('/bookinglist', bookinglist);
+router.get('/bookinglist/:id', Siglebook)
+router.post('/postbooking', postbooking);
+router.get('/userbookinglist/:id', userbook);
+router.put('/updatebooking', updatebooking);
+router.get('/cancelbooking/:id', CancelBooking);
+router.put('/updatebooking/update', singleupdate);
+router.post('/book/notify', Booknotify);
+router.post('/book/sellnotify', Sellernotify)
+router.post('/book/cancel', Cancelnotify)
+router.post('/book/cancelowner', Cancelnotifyowner)
 
-module.exports=router;
+module.exports = router;

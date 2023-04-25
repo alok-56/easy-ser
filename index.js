@@ -5,6 +5,8 @@ const dotenv = require('dotenv');
 require("./db/config");
 dotenv.config();
 const port = process.env.PORT || 4500;
+const book = require('./controller/BookingController/bookupdatebyback')
+book()
 
 //----------cloudinary--------------------//
 const fileupload = require('express-fileupload');
@@ -24,6 +26,7 @@ const Book = require('./routes/BookingModel/book')
 const Order = require('./routes/PaymentModel/payment')
 
 
+
 //----------------MIDDLEWARE-------------------//
 const app = express();
 app.use(cors());
@@ -31,6 +34,7 @@ app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 app.use(express.json());
 //-----------------MIDDLEWARE END----------------//
+
 
 //-----------------USE OF ROUTES--------------------------//
 
