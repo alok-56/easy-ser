@@ -21,10 +21,12 @@ const Booknotify = async (req, res) => {
         subject: date,
         html: `<H1>Hello sir/Mam!</h1><h3>You have sucessfully booked your room</h3>
         <h2>Owner Information</h2>
+        <br></br>
 
         <p>Owner_id :- ${ownerid}</p>
         <p>OwnerName :- ${name}</p>
         <p>OwnerNumber :- ${number}</p>
+        <br></br>
      
         <h2>Thank you..</h2>
         <h3>Team EasyPg</h3> `
