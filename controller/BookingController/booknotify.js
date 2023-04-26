@@ -19,11 +19,12 @@ const Booknotify = async (req, res) => {
         from: "easypeasy11746@gmail.com",
         to: Email,
         subject: date,
-        html: `<H1>Hello sir/Mam!</h1><p>You have sucessfully booked your room</p>
-        <p>Owner Information</p>
-        <p>Owner_id:-${ownerid}</p>
-        <p>OwnerName:-${name}</p>
-        <p style="color:"red">OwnerNumber:-${number}</p>
+        html: `<H1>Hello sir/Mam!</h1><h3>You have sucessfully booked your room</h3>
+        <h2>Owner Information</h2>
+
+        <p>Owner_id :- ${ownerid}</p>
+        <p>OwnerName :- ${name}</p>
+        <p>OwnerNumber :- ${number}</p>
      
         <h2>Thank you..</h2>
         <h3>Team EasyPg</h3> `

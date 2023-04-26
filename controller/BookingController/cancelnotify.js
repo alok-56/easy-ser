@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer')
 const Cancelnotify = async (req, res) => {
     let Email = req.body.email;
     let bookingid = req.body.id;
-    let dateid = new Date().getDate;
+    let dateid = new Date();
     const transport = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -15,14 +15,10 @@ const Cancelnotify = async (req, res) => {
         from: "easypeasy11746@gmail.com",
         to: Email,
         subject: dateid,
-        text: `
-        Hello sir,
-                 Your booking is cancelled..
-        To Know more about it..Talk to our Technical department..
-        Booking-Id : ${bookingid} 
-    
-        Thank you..
-        regrads Third home `
+        html: `
+        <h1>Hello Sir/Mam!</h1><p>Your Room Booked is <b></b> is cancelled</p>
+        <h2>Thank you..</h2>
+        <h3>Team EasyPg</h3>`
     }
     transport.sendMail(mailOptions, (err, info) => {
         if (err) {

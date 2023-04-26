@@ -6,6 +6,7 @@ const Sellernotify = async (req, res) => {
     let bookingid = req.body.book;
     let name = req.body.name;
     let number = req.body.number;
+    const date = new Date()
     const transport = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -16,14 +17,19 @@ const Sellernotify = async (req, res) => {
     const mailOptions = {
         from: "easypeasy11746@gmail.com",
         to: Email,
-        subject: "hello",
-        text: `Hello sir, New member Booked your room
-        Booking-Id : ${bookingid}
-        User-id : ${userid}
-        name : ${name}
-        number : ${number}
+        subject: date,
+        html: `<h1>Hello sir/Mam</h1>,<h3>Your Room is Booked by <b>${name}</b><h3/> 
+        <h2>User Information</h2>
+
+        <p>Booking-Id : ${bookingid}<p>
+        <p>User-id : ${userid}<p>
+        <p>name : ${name}<p>
+        <p>number : ${number}<p>
+
+        <h2>Thank you..</h2>
+        <h3>Team EasyPg</h3>
         
-        regrads Third home `
+        `
     }
     transport.sendMail(mailOptions, (err, info) => {
         if (err) {
