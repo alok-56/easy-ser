@@ -3,7 +3,8 @@ const nodemailer = require('nodemailer')
 const Repay_ownernotify = async (req, res) => {
     let Email = req.body.email;
     let bookingid = req.body.book;
-    const date = new Date()
+    let name = req.body.name;
+    const date = new Date();
 
     const transport = nodemailer.createTransport({
         service: "gmail",
