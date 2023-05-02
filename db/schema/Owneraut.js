@@ -12,8 +12,8 @@ const ownerautschema = new mongoose.Schema({
     Available: String,
     totalbed: String,
     verified: String,
-    id:String,
-    image:String
+    id: String,
+    image: String
 })
 
 const owneraut = mongoose.model("owneraut", ownerautschema)

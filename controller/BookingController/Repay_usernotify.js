@@ -1,11 +1,10 @@
-const nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer')
 
-const Cancelnotifyowner = (req, res) => {
+const Repay_usernotify = async (req, res) => {
     let Email = req.body.email;
-    let bookingid = req.body.id;
+    let bookingid = req.body.book;
+    const date = new Date()
 
-    console.log(bookingid)
-    let dateid = new Date();
     const transport = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -16,13 +15,17 @@ const Cancelnotifyowner = (req, res) => {
     const mailOptions = {
         from: "easypeasy11746@gmail.com",
         to: Email,
-        subject: dateid,
-        html: `<h1>Hello Sir!</h1><p>Your Room Booked By <b>Alok kumar</b> is cancelled</p> 
-        <p>Booking_id : ${bookingid}<p/> 
-    
+        subject: date,
+        html: `<h1>Hello sir/Mam!</h1><h3>You have sucessfully Paid This Month Rent.</h3>
+        <h2>Payment Information</h2>
+        <br></br>
+
+        <p>Booking_id :- ${bookingid}</p>
+       
+        <br></br>
+     
         <h2>Thank you..</h2>
-        <h3>Team EasyPg</h3>
-        `
+        <h3>Team EasyPg</h3> `
     }
     transport.sendMail(mailOptions, (err, info) => {
         if (err) {
@@ -33,7 +36,6 @@ const Cancelnotifyowner = (req, res) => {
         }
     })
 
-
 }
 
-module.exports = Cancelnotifyowner;
+module.exports = Repay_usernotify;

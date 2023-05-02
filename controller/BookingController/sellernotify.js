@@ -21,11 +21,13 @@ const Sellernotify = async (req, res) => {
         html: `<h1>Hello sir/Mam</h1><h3>Your Room is Booked by <b>${name}</b><h3/> 
         <h2>User Information</h2>
         <br></br>
+
         <p>Booking-Id : ${bookingid}<p>
         <p>User-id : ${userid}<p>
         <p>name : ${name}<p>
         <p>number : ${number}<p>
         <br></br>
+        
         <h3>Thank you..</h3>
         <h1>Team EasyPg</h1>
         

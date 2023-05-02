@@ -11,11 +11,15 @@ const singleupdate = require('../../controller/BookingController/Singleupdate');
 const updatebooking = require('../../controller/BookingController/updatebooking');
 const userbook = require('../../controller/BookingController/userbooking');
 const bookupdateback = require('../../controller/BookingController/bookupdatebyback');
+const Repay_ownernotify = require('../../controller/BookingController/Repay_ownernotify');
+const Repay_usernotify = require('../../controller/BookingController/Repay_usernotify');
+const Complain = require('../../controller/BookingController/Complain');
+const Contact = require('../../controller/BookingController/Contact');
 
 const router = express.Router();
 
 router.get('/bookinglist', bookinglist);
-router.get('/bookinglist/:id', Siglebook)
+router.get('/bookinglist/:id', Siglebook);
 router.post('/postbooking', postbooking);
 router.get('/userbookinglist/:id', userbook);
 router.put('/updatebooking', updatebooking);
@@ -26,5 +30,9 @@ router.post('/book/sellnotify', Sellernotify)
 router.post('/book/cancel', Cancelnotify)
 router.post('/book/cancelowner', Cancelnotifyowner)
 router.get('/allbook/notify', bookupdateback)
+router.post('/repayowner', Repay_ownernotify);
+router.post('/repayuser', Repay_usernotify);
+router.post('/complain', Complain);
+router.post('/contact', Contact);
 
 module.exports = router;
