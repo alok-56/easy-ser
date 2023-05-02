@@ -27,7 +27,8 @@ const bookingSchema = new mongoose.Schema({
     time: String,
     pay: String,
     refundid: String,
-    refundstatus: String
+    refundstatus: String,
+    extendpay: String
 });
 
 const bookingmodel = mongoose.model('bookingRooms', bookingSchema);
