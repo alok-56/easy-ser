@@ -15,6 +15,7 @@ const Repay_ownernotify = require('../../controller/BookingController/Repay_owne
 const Repay_usernotify = require('../../controller/BookingController/Repay_usernotify');
 const Complain = require('../../controller/BookingController/Complain');
 const Contact = require('../../controller/BookingController/Contact');
+const Datebooknotify = require('../../controller/BookingController/Datebooknotify');
 
 const router = express.Router();
 
@@ -34,5 +35,6 @@ router.post('/repayowner', Repay_ownernotify);
 router.post('/repayuser', Repay_usernotify);
 router.post('/complain', Complain);
 router.post('/contact', Contact);
+router.post('/datenotify',Datebooknotify);
 
 module.exports = router;
