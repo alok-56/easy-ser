@@ -3,8 +3,7 @@ const nodemailer = require('nodemailer')
 const Contact = async (req, res) => {
     let Email = req.body.email;
     let name = req.body.name;
-    let number = req.body.number;
-    let problem = req.body.problem;
+    let problem = req.body.complain;
 
     const date = new Date()
 
