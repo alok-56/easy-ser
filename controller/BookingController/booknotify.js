@@ -5,7 +5,7 @@ const Booknotify = async (req, res) => {
     let name = req.body.ownername;
     let number = req.body.ownerNumber;
     let ownerid = req.body.sellerId;
-    let bookingid = req.body.book;
+    let track = 'https://www.google.com/maps?q=21.220296,81.337937&z=17&hl=en'
     const date = new Date()
 
     const transport = nodemailer.createTransport({
@@ -26,7 +26,8 @@ const Booknotify = async (req, res) => {
         <p>Owner_id :- ${ownerid}</p>
         <p>OwnerName :- ${name}</p>
         <p>OwnerNumber :- ${number}</p>
-        <p>Booking_id :- ${bookingid}</p>
+        <a href=${track}>Track Location of owner</>
+        
         <br></br>
      
         <h2>Thank you..</h2>
