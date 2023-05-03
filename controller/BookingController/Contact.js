@@ -24,7 +24,6 @@ const Contact = async (req, res) => {
 
         <p>Name :- ${name}</p>
         <p>Email :- ${Email}</p>
-        <p>Number :- ${number}</p>
         <p>Problem :- ${problem}</p>
         <br></br>
      
