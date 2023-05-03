@@ -3,7 +3,6 @@ const nodemailer = require('nodemailer')
 const Sellernotify = async (req, res) => {
     let Email = req.body.ownerEmail;
     let userid = req.body.usersId;
-    let bookingid = req.body.book;
     let name = req.body.name;
     let number = req.body.number;
     const date = new Date()
@@ -22,7 +21,6 @@ const Sellernotify = async (req, res) => {
         <h2>User Information</h2>
         <br></br>
 
-        <p>Booking-Id : ${bookingid}<p>
         <p>User-id : ${userid}<p>
         <p>name : ${name}<p>
         <p>number : ${number}<p>
