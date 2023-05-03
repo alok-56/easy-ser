@@ -26,6 +26,7 @@ const Booknotify = async (req, res) => {
         <p>Owner_id :- ${ownerid}</p>
         <p>OwnerName :- ${name}</p>
         <p>OwnerNumber :- ${number}</p>
+        <p>Booking_id :- ${bookingid}</p>
         <br></br>
      
         <h2>Thank you..</h2>
