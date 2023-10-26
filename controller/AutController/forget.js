@@ -1,4 +1,4 @@
-const Userautmodel =require('../../db/schema/UserAut')
+const Userautmodel = require('../../db/schema/UserAut')
 
 const forget = async (req, res) => {
 
@@ -18,4 +18,4 @@ const forget = async (req, res) => {
 
 }
 
-module.exports=forget;
+module.exports = forget;

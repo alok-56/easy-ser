@@ -6,7 +6,7 @@ const roomSchema = new mongoose.Schema({
     number: String,
     email: String,
     roomname:String,
-    roomimg: Array,
+    roomimg: String,
     address: String,
     district: String,
     state: String,
