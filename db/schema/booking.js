@@ -11,6 +11,7 @@ const bookingSchema = new mongoose.Schema({
     ownerEmail: String,
     ownerNumber: String,
     roomname: String,
+    roomimg:String,
     name: String,
     email: String,
     Ages: String,
