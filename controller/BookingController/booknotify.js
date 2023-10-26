@@ -5,7 +5,7 @@ const Booknotify = async (req, res) => {
     let name = req.body.ownername;
     let number = req.body.ownerNumber;
     let ownerid = req.body.sellerId;
-    let track = 'https://www.google.com/maps?q=21.220296,81.337937&z=17&hl=en'
+    let track = req.body.track;
     const date = new Date()
 
     const transport = nodemailer.createTransport({
