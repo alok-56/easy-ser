@@ -1,13 +1,14 @@
 const DataModel = require("../db/schema/Dataschema");
 
-
 const PostData = async (req, res) => {
   try {
-    let data = await DataModel.create(req.body);
-    if (data) {
+    let incomingData = req.body;
+    const newDocument = new DataModel({ dynamicData: [incomingData] });
+    let response = await newDocument.save();
+    if (response) {
       res.status(200).json({
         status: "success",
-        data: data,
+        data: response,
       });
     }
   } catch (error) {

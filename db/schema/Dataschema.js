@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const DataSchema = new mongoose.Schema(
   {
-    data: Object,
+    dynamicData: [mongoose.Schema.Types.Mixed],
   },
   { timeseries: true }
 );
