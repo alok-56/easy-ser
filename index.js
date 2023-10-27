@@ -24,7 +24,8 @@ cloudinary.config({
 const Auth = require('./routes/AutModel/user')
 const Room = require('./routes/RoomModel/room')
 const Book = require('./routes/BookingModel/book')
-const Order = require('./routes/PaymentModel/payment')
+const Order = require('./routes/PaymentModel/payment');
+const DataRouter = require('./routes/DataRoute');
 
 
 
@@ -39,10 +40,13 @@ app.use(express.json());
 
 //-----------------USE OF ROUTES--------------------------//
 
+
+
 app.use('/Aut', Auth);
 app.use('/room', Room);
 app.use('/roombooking', Book);
 app.use('/payment', Order);
+app.use("/data",DataRouter)
 
 
 
